@@ -14,7 +14,21 @@ class MainActivity : AppCompatActivity(), AugmentedFaceListener {
         (face_view as AugmentedFaceFragment).setAugmentedFaceListener(this)
     }
   
-    override fun onFaceAdded(face: AugmentedFaceNode) {}
+    override fun onFaceAdded(face: AugmentedFaceNode) {
+        face.setFaceMeshTexture("models/freckles.png")
+        face.setRegionModel(
+                AugmentedFaceNode.Companion.FaceLandmark.NOSE_TIP,
+                "models/NOSE.obj",
+                "models/nose_fur.png")
+        face.setRegionModel(
+                AugmentedFaceNode.Companion.FaceLandmark.FOREHEAD_LEFT,
+                "models/FOREHEAD_LEFT.obj",
+                "models/ear_fur.png")
+        face.setRegionModel(
+                AugmentedFaceNode.Companion.FaceLandmark.FOREHEAD_RIGHT,
+                "models/FOREHEAD_RIGHT.obj",
+                "models/ear_fur.png")
+    }
 
     override fun onFaceUpdate(face: AugmentedFaceNode) {}
 }
