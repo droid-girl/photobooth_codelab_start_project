@@ -22,4 +22,4 @@ class MainActivity : AppCompatActivity(), AugmentedFaceListener {
    override fun onFaceUpdate(face: AugmentedFaceNode) {}
 }
 ```
-Check out the codelab for more information and learn how to use the wrapper -> https://arcore.how/posts/ar_faces_intro/lab/#0 
+
